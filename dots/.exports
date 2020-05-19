@@ -1,9 +1,0 @@
-export EDITOR=nano
-
-DOTFILES_EXPORT="$HOME/.dotfiles/bin/dotfiles"
-LOCAL_BIN_EXPORT="/usr/local/bin"
-LOCAL_SBIN_EXPORT="/usr/local/sbin"
-YARN_BIN_EXPORT="$HOME/.config/yarn/global/node_modules/.bin"
-
-
-export PATH="$DOTFILES_EXPORT:$LOCAL_BIN_EXPORT:$LOCAL_SBIN_EXPORT:$YARN_BIN_EXPORT:$PATH"

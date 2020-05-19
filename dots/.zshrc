@@ -99,8 +99,10 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-for file in ~/.{exports,aliases}; do
+for file in ~/.{aliases}; do
 	[ -r "$file" ] && [ -f "$file" ] && source "$file";
 done;
 unset file;
+
+alias dotfiles="$DOTFILES_DIR/bin/dotfiles"
 
