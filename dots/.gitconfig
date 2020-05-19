@@ -1,0 +1,15 @@
+[user]
+	name = Anoop Varghese
+	email = avarghese@atlassian.com
+
+[github]
+  user = anupvarghese
+
+[core]
+	excludesfile = /Users/anupvarghese/.gitignore_global
+
+[mergetool]
+	keepBackup = false
+
+[credential]
+	helper = osxkeychain
