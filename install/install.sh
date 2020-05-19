@@ -5,10 +5,8 @@ DOTFILES_DIR="$(cd "$(dirname "../../")"; pwd)"
 echo "🍻 Homebrew setup"
 # . "$DOTFILES_DIR/install/brew.sh"
 
-
 echo "🕹️ Console configuration"
-# sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-
+. "$DOTFILES_DIR/install/zsh.sh"
 
 echo "🔗 Symlinks"
 . "$DOTFILES_DIR/install/symlinks.sh"
@@ -16,5 +14,13 @@ echo "🔗 Symlinks"
 echo "💻 Mac specific configs"
 . "$DOTFILES_DIR/mac/defaults.sh"
 
+echo "⚓ Configure dock" 
+. "$DOTFILES_DIR/mac/dock.sh"
+
 echo "VSCode settings"
 . "$DOTFILES_DIR/vscode/extensions.sh"
+
+echo "Clear all"
+. "$DOTFILES_DIR/bin/dotfiles" clean
+
+zsh
