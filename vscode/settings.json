@@ -1,2 +1,9 @@
 {
+    
+    "[rust]": {
+        "editor.formatOnSave": true
+    },
+    "rust-client.rustupPath": "rustup",
+    "rust-client.channel": "stable",
+    "editor.tabSize": 2
 }

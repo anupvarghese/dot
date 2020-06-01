@@ -8,9 +8,26 @@ export ZSH="$HOME/.dotfiles/.oh-my-zsh"
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="spaceship"
 
-ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#ff00ff,bg=cyan,bold,underline"
+export SPACESHIP_DOCKER_SYMBOL="🐳  "
+
+export SPACESHIP_PROMPT_ORDER=(
+	time
+	vi_mode
+	user
+	host
+	dir
+	git
+	node
+	docker
+	line_sep
+	char
+)
+
+export SPACESHIP_CHAR_SYMBOL=">>> "
+export SPACESHIP_DIR_TRUNC="1"
+
+ZSH_THEME="spaceship"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -106,3 +123,5 @@ unset file;
 
 alias dotfiles="$DOTFILES_DIR/bin/dotfiles"
 
+echo "------------------GL HF----------------------"
+curl wttr.in/Sydney
