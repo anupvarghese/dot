@@ -5,5 +5,11 @@
     },
     "rust-client.rustupPath": "rustup",
     "rust-client.channel": "stable",
-    "editor.tabSize": 2
+    "editor.tabSize": 2,
+    "workbench.colorTheme": "Monokai Dimmed",
+    "editor.fontLigatures": true,
+    "editor.fontWeight": "500",
+    "editor.fontSize": 14,
+    "workbench.iconTheme": "material-icon-theme",
+    "editor.fontFamily": "FiraCode-Retina"
 }
