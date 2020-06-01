@@ -24,7 +24,7 @@ export SPACESHIP_PROMPT_ORDER=(
 	char
 )
 
-export SPACESHIP_CHAR_SYMBOL=">>> "
+export SPACESHIP_CHAR_SYMBOL="❯❯❯ "
 export SPACESHIP_DIR_TRUNC="1"
 
 ZSH_THEME="spaceship"
