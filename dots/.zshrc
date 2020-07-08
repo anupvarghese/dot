@@ -123,5 +123,3 @@ unset file;
 
 alias dotfiles="$DOTFILES_DIR/bin/dotfiles"
 
-echo "------------------GL HF----------------------"
-curl wttr.in/Sydney
