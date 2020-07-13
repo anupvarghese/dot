@@ -2,7 +2,7 @@ export DOTFILES_DIR EXTRA_DIR
 DOTFILES_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && cd .. && pwd )"
 
 echo "🍻 Homebrew setup"
-# . "$DOTFILES_DIR/install/brew.sh"
+. "$DOTFILES_DIR/install/brew.sh"
 
 echo "🕹️ Console configuration"
 . "$DOTFILES_DIR/install/zsh.sh"

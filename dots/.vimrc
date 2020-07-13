@@ -29,12 +29,12 @@ call plug#begin(expand('~/.config/nvim/plugged'))
 "*****************************************************************************
 Plug 'scrooloose/nerdtree'
 Plug 'jistr/vim-nerdtree-tabs'
-Plug 'ctrlpvim/ctrlp.vim'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-fugitive'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'airblade/vim-gitgutter'
+Plug 'airblade/vim-rooter'
 Plug 'vim-scripts/grep.vim'
 Plug 'vim-scripts/CSApprox'
 Plug 'Raimondi/delimitMate'
@@ -363,7 +363,8 @@ if executable('rg')
   command! -bang -nargs=* Find call fzf#vim#grep('rg --column --line-number --no-heading --fixed-strings --ignore-case --hidden --follow --glob "!.git/*" --color "always" '.shellescape(<q-args>).'| tr -d "\017"', 1, <bang>0)
 endif
 
-cnoremap <C-P> <C-R>=expand("%:p:h") . "/" <CR>
+nnoremap <silent> <leader>f :Rg<CR>
+nnoremap <silent> <leader>e :FZF -m<CR>
 nnoremap <silent> <leader>b :Buffers<CR>
 nnoremap <silent> <leader>e :FZF -m<CR>
 "Recovery commands from history through FZF

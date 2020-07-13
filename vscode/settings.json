@@ -11,5 +11,16 @@
     "editor.fontWeight": "500",
     "editor.fontSize": 14,
     "workbench.iconTheme": "material-icon-theme",
-    "editor.fontFamily": "Meslo LG S DZ for Powerline"
+    "editor.fontFamily": "FiraCode-Retina",
+    "[typescript]": {
+        "editor.defaultFormatter": "eternalphane.tsfmt-vscode"
+    },
+    "window.zoomLevel": 1,
+    "[javascript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "editor.codeActionsOnSave": {
+        "source.fixAll.eslint": true
+    },
+    "diffEditor.ignoreTrimWhitespace": false
 }
