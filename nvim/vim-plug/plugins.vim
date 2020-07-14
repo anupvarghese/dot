@@ -29,4 +29,6 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'airblade/vim-rooter'
     " comment things
     Plug 'tpope/vim-commentary'
+    " whichkey
+    Plug 'liuchengxu/vim-which-key'
 call plug#end()
