@@ -9,5 +9,7 @@ brew cask install --appdir="/Applications" iterm2
 brew cask install --appdir="/Applications" visual-studio-code
 brew cask install --appdir="/Applications" slack
 
+brew tap homebrew/cask-fonts
+brew cask install font-hack-nerd-font
 
 

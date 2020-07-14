@@ -23,3 +23,6 @@ endif
 
 " Required:
 call plug#begin(expand('~/.config/nvim/plugged'))
+
+set encoding=UTF-8
+let g:webdevicons_enable = 1
