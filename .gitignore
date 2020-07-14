@@ -1,1 +1,3 @@
 .oh-my-zsh
+autoload
+.netrwhist
