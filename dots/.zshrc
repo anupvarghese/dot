@@ -123,5 +123,5 @@ for file in ~/.{aliases}; do
 done;
 unset file;
 
-alias dotfiles="$DOTFILES_DIR/bin/dotfiles"
+source ~/.aliases
 
