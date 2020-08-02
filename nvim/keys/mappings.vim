@@ -10,6 +10,9 @@ nnoremap <M-l>    :vertical resize +2<CR>
 
 " TAB in general mode will move to text buffer
 nnoremap <TAB> :bnext<CR>
+" close an opened buffer
+nnoremap <Leader>q :bdelete<CR>
+
 " SHIFT-TAB will go back
 nnoremap <S-TAB> :bprevious<CR>
 
@@ -34,3 +37,5 @@ nnoremap <C-l> <C-w>l
 
 nnoremap <Leader>o o<Esc>^Da
 nnoremap <Leader>O O<Esc>^Da
+
+nnoremap <Leader>s :<C-u>call gitblame#echo()<CR>

@@ -31,4 +31,6 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'tpope/vim-commentary'
     " whichkey
     Plug 'liuchengxu/vim-which-key'
+    " Git blame
+    Plug 'zivyangll/git-blame.vim'
 call plug#end()

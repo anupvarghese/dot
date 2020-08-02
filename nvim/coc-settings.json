@@ -1,5 +1,4 @@
 {
-  "coc.preferences.formatOnSaveFileTypes": ["typescript", "javascript", "json", "yaml"],
   "explorer.width": 30,
   "explorer.icon.enableVimDevicons": true,
   "explorer.icon.enableNerdfont": true,
@@ -8,5 +7,15 @@
     "<cr>": ["expandable?", "expand", "open"],
     "v": "open:vsplit"   
   },
-  "coc.preferences.extensionUpdateCheck": "daily"
+  "coc.preferences.extensionUpdateCheck": "daily",
+  "eslint.autoFixOnSave": true,
+  "eslint.filetypes": ["javascript", "javascriptreact", "typescript", "typescriptreact"],
+  "coc.preferences.formatOnSaveFiletypes": [
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact"
+  ],
+  "tsserver.formatOnType": true,
+  "coc.preferences.formatOnType": true
 }
