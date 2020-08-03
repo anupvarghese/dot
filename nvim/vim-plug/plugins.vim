@@ -33,4 +33,6 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'liuchengxu/vim-which-key'
     " Git blame
     Plug 'zivyangll/git-blame.vim'
+    " git gutter
+    Plug 'airblade/vim-gitgutter'
 call plug#end()
