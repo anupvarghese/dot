@@ -93,6 +93,25 @@ ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=5'
 
 source $ZSH/oh-my-zsh.sh
 
+##### Functions
+
+# Reinstalling Xcode
+#
+# how to use:
+# xcode-reinstall
+#
+function xcode-reinstall () {
+  XCODE_PATH="$(xcode-select --print-path)"
+  echo "Xcode current path: ${XCODE_PATH}"
+  echo "Removing Xcode ..."
+  sudo rm -r -f /Library/Developer/CommandLineTools
+  echo "✅ Removing Xcode"
+  echo "Reinstalling Xcode ..."
+  xcode-select --install
+  echo "✅ Reinstalling Xcode"
+}
+
+
 # User configuration
 
 # export MANPATH="/usr/local/man:$MANPATH"

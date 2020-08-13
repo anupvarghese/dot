@@ -36,4 +36,6 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'zivyangll/git-blame.vim'
     " git gutter
     Plug 'airblade/vim-gitgutter'
+    " Multi select like in vscode
+    Plug 'mg979/vim-visual-multi', {'branch': 'master'}
 call plug#end()
