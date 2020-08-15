@@ -40,9 +40,10 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'mg979/vim-visual-multi', {'branch': 'master'}
 
     " Coc Plugins
-    Plug 'weirongxu/coc-explorer', {'do': 'yarn install --frozen-lockfile'}
+    Plug 'weirongxu/coc-explorer'
     Plug 'neoclide/coc-tsserver', {'do': 'yarn install --frozen-lockfile'}
     Plug 'neoclide/coc-eslint', {'do': 'yarn install --frozen-lockfile'}
     Plug 'neoclide/coc-json', {'do': 'yarn install --frozen-lockfile'}
     Plug 'neoclide/coc-yaml', {'do': 'yarn install --frozen-lockfile'}
+    Plug 'neoclide/coc-prettier', {'do': 'yarn install --frozen-lockfile'}
 call plug#end()
