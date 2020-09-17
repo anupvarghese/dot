@@ -11,12 +11,11 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     " Better Syntax Support
     Plug 'sheerun/vim-polyglot'
     " File Explorer
-    " Plug 'scrooloose/NERDTree'
     " Auto pairs for '(' '[' '{'
     Plug 'jiangmiao/auto-pairs'
     " Theme
-    Plug 'joshdick/onedark.vim'
-    Plug 'arcticicestudio/nord-vim'
+    " Plug 'arcticicestudio/nord-vim'
+    Plug 'mhartington/oceanic-next'
     " coc
     Plug 'neoclide/coc.nvim', {'branch': 'release'}
     " airline
@@ -33,9 +32,10 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     " whichkey
     Plug 'liuchengxu/vim-which-key'
     " Git blame
-    Plug 'zivyangll/git-blame.vim'
+    " Plug 'zivyangll/git-blame.vim'
     " git gutter
     Plug 'airblade/vim-gitgutter'
+    Plug 'zivyangll/git-blame.vim'
     " Multi select like in vscode
     Plug 'mg979/vim-visual-multi', {'branch': 'master'}
 

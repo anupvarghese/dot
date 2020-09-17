@@ -19,5 +19,11 @@
     "markdown"
   ],
   "tsserver.formatOnType": true,
-  "coc.preferences.formatOnType": true
+  "coc.preferences.formatOnType": true,
+  "python.jediPath": "/usr/local/lib/python3.8/site-packages",
+  "python.formatting.provider": "black",
+  "python.linting.pylintEnabled": true,
+  "python.linting.lintOnSave": true,
+  "git.enableGutters": true,
+  "git.branchCharacter": ""
 }
