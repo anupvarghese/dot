@@ -41,10 +41,12 @@ nnoremap <Leader>O O<Esc>^Da
 vmap <leader>f  <Plug>(coc-format-selected)
 nmap <leader>f  <Plug>(coc-format-selected)
 
-nnoremap <Leader>s :<C-u>call gitblame#echo()<CR>
+vmap <leader>a <Plug>(coc-codeaction-selected)
+nmap <leader>a <Plug>(coc-codeaction-selected)
 
 autocmd BufEnter * if (winnr("$") == 1 && &filetype == 'coc-explorer') | q | endif
 
-autocmd CursorHold *  if (&filetype != 'coc-explorer' && &filetype != 'netrw') | :call gitblame#echo() | endif
+nnoremap <Leader>s :<C-u>call gitblame#echo()<CR>
 
+autocmd CursorHold *  if (&filetype != 'coc-explorer' && &filetype != 'netrw') | :call gitblame#echo() | endif
 

@@ -24,6 +24,7 @@
   "python.formatting.provider": "black",
   "python.linting.pylintEnabled": true,
   "python.linting.lintOnSave": true,
-  "git.enableGutters": true,
-  "git.branchCharacter": ""
+  "cSpell.userWords": [
+    "atlassian"
+  ]
 }

@@ -31,11 +31,13 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'tpope/vim-commentary'
     " whichkey
     Plug 'liuchengxu/vim-which-key'
-    " Git blame
-    " Plug 'zivyangll/git-blame.vim'
     " git gutter
     Plug 'airblade/vim-gitgutter'
+    Plug 'tpope/vim-fugitive'
+    Plug 'tommcdo/vim-fubitive'
+    Plug 'tommcdo/vim-fugitive-blame-ext'
     Plug 'zivyangll/git-blame.vim'
+
     " Multi select like in vscode
     Plug 'mg979/vim-visual-multi', {'branch': 'master'}
 
@@ -46,4 +48,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'neoclide/coc-json', {'do': 'yarn install --frozen-lockfile'}
     Plug 'neoclide/coc-yaml', {'do': 'yarn install --frozen-lockfile'}
     Plug 'neoclide/coc-prettier', {'do': 'yarn install --frozen-lockfile'}
+    
+    " target edits
+    Plug 'wellle/targets.vim'
 call plug#end()
