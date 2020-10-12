@@ -40,6 +40,8 @@ set foldnestmax=10
 set nofoldenable
 set foldlevel=2
 
+hi CocCursorRange guibg=#b16286 guifg=#ebdbb2
+
 au! BufWritePost $MYVIMRC source %      " auto source when writing to init.vm alternatively you can run :source $MYVIMRC
 
 " You can't stop me
