@@ -38,6 +38,9 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'tommcdo/vim-fugitive-blame-ext'
     Plug 'zivyangll/git-blame.vim'
 
+    " Modify * to also work with visual selections.
+    Plug 'nelstrom/vim-visual-star-search'
+
     " Automatically clear search highlights after you move your cursor.
     Plug 'haya14busa/is.vim'
 
