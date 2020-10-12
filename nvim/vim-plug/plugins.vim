@@ -38,8 +38,8 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'tommcdo/vim-fugitive-blame-ext'
     Plug 'zivyangll/git-blame.vim'
 
-    " Multi select like in vscode
-    Plug 'mg979/vim-visual-multi', {'branch': 'master'}
+    " Automatically clear search highlights after you move your cursor.
+    Plug 'haya14busa/is.vim'
 
     " Coc Plugins
     Plug 'weirongxu/coc-explorer'
