@@ -43,6 +43,8 @@ call plug#begin('~/.config/nvim/autoload/plugged')
 
     " Automatically clear search highlights after you move your cursor.
     Plug 'haya14busa/is.vim'
+    " Auto reload
+    Plug 'djoshea/vim-autoread'    
 
     " Coc Plugins
     Plug 'weirongxu/coc-explorer'
@@ -51,7 +53,6 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'neoclide/coc-json', {'do': 'yarn install --frozen-lockfile'}
     Plug 'neoclide/coc-yaml', {'do': 'yarn install --frozen-lockfile'}
     Plug 'neoclide/coc-prettier', {'do': 'yarn install --frozen-lockfile'}
-    
     " target edits
     Plug 'wellle/targets.vim'
 call plug#end()
