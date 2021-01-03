@@ -1,7 +1,0 @@
-[
-    {
-        "key": "f5",
-        "command": "-workbench.action.debug.continue",
-        "when": "inDebugMode"
-    }
-]

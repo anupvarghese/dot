@@ -48,11 +48,11 @@ call plug#begin('~/.config/nvim/autoload/plugged')
 
     " Coc Plugins
     Plug 'weirongxu/coc-explorer'
-    Plug 'neoclide/coc-tsserver', {'do': 'yarn install --frozen-lockfile'}
-    Plug 'neoclide/coc-eslint', {'do': 'yarn install --frozen-lockfile'}
-    Plug 'neoclide/coc-json', {'do': 'yarn install --frozen-lockfile'}
-    Plug 'neoclide/coc-yaml', {'do': 'yarn install --frozen-lockfile'}
-    Plug 'neoclide/coc-prettier', {'do': 'yarn install --frozen-lockfile'}
+    " Plug 'neoclide/coc-tsserver', {'branch': 'release'}
+    " Plug 'neoclide/coc-eslint', {'do': 'yarn install --frozen-lockfile'}
+    " Plug 'neoclide/coc-json', {'do': 'yarn install --frozen-lockfile'}
+    " Plug 'neoclide/coc-yaml', {'do': 'yarn install --frozen-lockfile'}
+    " Plug 'neoclide/coc-prettier', {'do': 'yarn install --frozen-lockfile'}
     " target edits
     Plug 'wellle/targets.vim'
 call plug#end()
