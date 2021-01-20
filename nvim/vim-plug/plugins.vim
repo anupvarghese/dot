@@ -35,7 +35,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'airblade/vim-gitgutter'
     Plug 'tpope/vim-fugitive'
     Plug 'tommcdo/vim-fubitive'
-    Plug 'tommcdo/vim-fugitive-blame-ext'
+    Plug 'tommcdo/vim-fugitive-blame-ext' 
     Plug 'zivyangll/git-blame.vim'
 
     " Modify * to also work with visual selections.
@@ -55,4 +55,6 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'neoclide/coc-prettier', {'do': 'yarn install --frozen-lockfile'}
     " target edits
     Plug 'wellle/targets.vim'
+    " better whitespaces
+    Plug 'ntpeters/vim-better-whitespace'
 call plug#end()

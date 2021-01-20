@@ -36,5 +36,7 @@
   "python.linting.lintOnSave": true,
   "cSpell.userWords": [
     "atlassian"
-  ]
+  ],
+  "yaml.validate": true,
+  "yaml.format.enable": true
 }

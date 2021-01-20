@@ -11,7 +11,7 @@ nnoremap <M-l>    :vertical resize +2<CR>
 " TAB in general mode will move to text buffer
 nnoremap <TAB> :bnext<CR>
 " close an opened buffer
-nnoremap <Leader>q :bdelete<CR>
+nnoremap <Leader>q :bw<CR>
 
 " SHIFT-TAB will go back
 nnoremap <S-TAB> :bprevious<CR>
