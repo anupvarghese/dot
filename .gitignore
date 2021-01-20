@@ -1,3 +1,4 @@
 .oh-my-zsh
 autoload
 .netrwhist
+.DS_Store

@@ -7,8 +7,6 @@ db 88  .8D `8b  d8'    88    88        .88.   88booo. 88.     db   8D
 VP Y8888D'  `Y88P'     YP    YP      Y888888P Y88888P Y88888P `8888Y' 
 </pre>
 
-
-
 ### How to install?
 
 ```shell
@@ -17,3 +15,6 @@ git clone https://github.com/anupvarghese/dotfiles ~/.dotfiles
 cd ~/.dotfiles && ./install.sh
 ```
 
+#### How does it look?
+
+![](./screen.jpg)
