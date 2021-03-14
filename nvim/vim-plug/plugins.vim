@@ -44,8 +44,9 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     " Automatically clear search highlights after you move your cursor.
     Plug 'haya14busa/is.vim'
     " Auto reload
-    Plug 'djoshea/vim-autoread'    
-
+    Plug 'djoshea/vim-autoread'
+    " Indentguide
+    Plug 'thaerkh/vim-indentguides'
     " Coc Plugins
     Plug 'weirongxu/coc-explorer'
     Plug 'neoclide/coc-tsserver', {'do': 'yarn install --frozen-lockfile'}

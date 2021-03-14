@@ -9,3 +9,4 @@ source $HOME/.config/nvim/themes/airline.vim
 source $HOME/.config/nvim/plug-config/fzf.vim
 source $HOME/.config/nvim/plug-config/commentary.vim
 source $HOME/.config/nvim/plug-config/git-gutter.vim
+source $HOME/.config/nvim/plug-config/indentguides.vim
