@@ -11,7 +11,6 @@
     "editor.fontWeight": "500",
     "editor.fontSize": 14,
     "workbench.iconTheme": "material-icon-theme",
-    "editor.fontFamily": "FiraCode-Retina",
     "[typescript]": {
         "editor.defaultFormatter": "eternalphane.tsfmt-vscode"
     },
@@ -24,5 +23,6 @@
     },
     "diffEditor.ignoreTrimWhitespace": false,
     "editor.suggestSelection": "first",
-    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue"
+    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+    "editor.codeLensFontFamily": "Menlo, Monaco, 'Courier New', monospace"
 }

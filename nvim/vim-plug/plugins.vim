@@ -7,61 +7,51 @@ if empty(glob('~/.config/nvim/autoload/plug.vim'))
 endif
 
 call plug#begin('~/.config/nvim/autoload/plugged')
-
-    " Better Syntax Support
-    Plug 'sheerun/vim-polyglot'
-    " File Explorer
-    " Auto pairs for '(' '[' '{'
-    Plug 'jiangmiao/auto-pairs'
-    " Theme
-    " Plug 'arcticicestudio/nord-vim'
-    Plug 'mhartington/oceanic-next'
-    " coc
-    " Plug 'neoclide/coc.nvim', {'branch': 'release'}
-    " airline
-    Plug 'vim-airline/vim-airline'
-    Plug 'vim-airline/vim-airline-themes'
-    " fonts
-    Plug 'ryanoasis/vim-devicons'
-    " fzf
-    Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-    Plug 'junegunn/fzf.vim'
-    Plug 'airblade/vim-rooter'
     " comment things
     Plug 'tpope/vim-commentary'
-    " whichkey
-    Plug 'liuchengxu/vim-which-key'
-    " git gutter
-    Plug 'airblade/vim-gitgutter'
-    Plug 'tpope/vim-fugitive'
-    Plug 'tommcdo/vim-fubitive'
-    Plug 'tommcdo/vim-fugitive-blame-ext' 
-    Plug 'zivyangll/git-blame.vim'
-
+    
     " Modify * to also work with visual selections.
     Plug 'nelstrom/vim-visual-star-search'
 
-    " Automatically clear search highlights after you move your cursor.
-    Plug 'haya14busa/is.vim'
-    " Auto reload
-    Plug 'djoshea/vim-autoread'
     " Indentguide
     Plug 'thaerkh/vim-indentguides'
-    " Coc Plugins
-    Plug 'weirongxu/coc-explorer'
-    " Plug 'neoclide/coc-tsserver', {'do': 'yarn install --frozen-lockfile'}
-    " Plug 'neoclide/coc-eslint', {'do': 'yarn install --frozen-lockfile'}
-    " Plug 'neoclide/coc-json', {'do': 'yarn install --frozen-lockfile'}
-    " Plug 'neoclide/coc-yaml', {'do': 'yarn install --frozen-lockfile'}
-    " Plug 'neoclide/coc-prettier', {'do': 'yarn install --frozen-lockfile'}
-    " target edits
-    Plug 'wellle/targets.vim'
+
     " better whitespaces
     Plug 'ntpeters/vim-better-whitespace'
+
     " Telescope
     Plug 'nvim-telescope/telescope.nvim'
+
     " Plenary
     Plug 'nvim-lua/plenary.nvim'
+
     " Popup
     Plug 'nvim-lua/popup.nvim'
+
+    " Tree sitter
+    Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+
+    " NvimTree
+    Plug 'kyazdani42/nvim-web-devicons' " for file icons
+    Plug 'kyazdani42/nvim-tree.lua'
+
+    " Nvim completion
+    Plug 'hrsh7th/nvim-compe'
+
+    "Theme
+    Plug 'Mofiqul/vscode.nvim'
+    Plug 'akinsho/nvim-bufferline.lua'
+
+    "LSP
+    Plug 'neovim/nvim-lspconfig'
+
+    "Formatter
+    Plug 'sbdchd/neoformat'
+
+    "git
+    Plug 'lewis6991/gitsigns.nvim'
+
+    "status line
+    Plug 'vim-airline/vim-airline'
+    Plug 'vim-airline/vim-airline-themes'
 call plug#end()

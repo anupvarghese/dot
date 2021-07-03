@@ -1,0 +1,1 @@
+nnoremap <leader>F :Neoformat prettier<CR>

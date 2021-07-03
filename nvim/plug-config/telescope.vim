@@ -19,9 +19,9 @@ nnoremap <leader>ft :lua telescope_find_files_in_path("./tests")<CR>
 nnoremap <leader>fT :lua telescope_live_grep_in_path("./tests")<CR>
 " nnoremap <leader>ff :Telescope live_grep<CR>
 nnoremap <leader>fo :Telescope file_browser<CR>
-nnoremap <leader>fn :Telescope find_files<CR>
+nnoremap <C-f> :Telescope find_files<CR>
 nnoremap <leader>fg :Telescope git_branches<CR>
 nnoremap <leader>fb :Telescope buffers<CR>
 nnoremap <leader>fs :Telescope lsp_document_symbols<CR>
-nnoremap <leader>ff :Telescope live_grep<CR>
+nnoremap <leader>g :Telescope live_grep<CR>
 nnoremap <leader>FF :Telescope grep_string<CR>

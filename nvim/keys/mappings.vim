@@ -38,11 +38,11 @@ nnoremap <C-l> <C-w>l
 nnoremap <Leader>o o<Esc>^Da
 nnoremap <Leader>O O<Esc>^Da
 
-vmap <leader>f  <Plug>(coc-format-selected)
-nmap <leader>f  <Plug>(coc-format-selected)
+" vmap <leader>f  <Plug>(coc-format-selected)
+" nmap <leader>f  <Plug>(coc-format-selected)
 
-vmap <leader>a <Plug>(coc-codeaction-selected)
-nmap <leader>a <Plug>(coc-codeaction-selected)
+" vmap <leader>a <Plug>(coc-codeaction-selected)
+" nmap <leader>a <Plug>(coc-codeaction-selected)
 
 " Press * to search for the term under the cursor or a visual selection and
 " then press a key below to replace all instances of it in the current file.
@@ -64,9 +64,9 @@ xnoremap <silent> s* "sy:let @/=@s<CR>cgn
 " Clear search highlights.
 map <Leader><Space> :let @/=''<CR>
 
-autocmd BufEnter * if (winnr("$") == 1 && &filetype == 'coc-explorer') | q | endif
+" autocmd BufEnter * if (winnr("$") == 1 && &filetype == 'coc-explorer') | q | endif
 
-nnoremap <Leader>s :<C-u>call gitblame#echo()<CR>
+" nnoremap <Leader>s :<C-u>call gitblame#echo()<CR>
 
-autocmd CursorHold *  if (&filetype != 'coc-explorer' && &filetype != 'netrw') | :call gitblame#echo() | endif
+" autocmd CursorHold *  if (&filetype != 'coc-explorer' && &filetype != 'netrw') | :call gitblame#echo() | endif
 
