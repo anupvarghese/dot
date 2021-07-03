@@ -17,7 +17,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     " Plug 'arcticicestudio/nord-vim'
     Plug 'mhartington/oceanic-next'
     " coc
-    Plug 'neoclide/coc.nvim', {'branch': 'release'}
+    " Plug 'neoclide/coc.nvim', {'branch': 'release'}
     " airline
     Plug 'vim-airline/vim-airline'
     Plug 'vim-airline/vim-airline-themes'
@@ -49,13 +49,19 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'thaerkh/vim-indentguides'
     " Coc Plugins
     Plug 'weirongxu/coc-explorer'
-    Plug 'neoclide/coc-tsserver', {'do': 'yarn install --frozen-lockfile'}
-    Plug 'neoclide/coc-eslint', {'do': 'yarn install --frozen-lockfile'}
-    Plug 'neoclide/coc-json', {'do': 'yarn install --frozen-lockfile'}
-    Plug 'neoclide/coc-yaml', {'do': 'yarn install --frozen-lockfile'}
-    Plug 'neoclide/coc-prettier', {'do': 'yarn install --frozen-lockfile'}
+    " Plug 'neoclide/coc-tsserver', {'do': 'yarn install --frozen-lockfile'}
+    " Plug 'neoclide/coc-eslint', {'do': 'yarn install --frozen-lockfile'}
+    " Plug 'neoclide/coc-json', {'do': 'yarn install --frozen-lockfile'}
+    " Plug 'neoclide/coc-yaml', {'do': 'yarn install --frozen-lockfile'}
+    " Plug 'neoclide/coc-prettier', {'do': 'yarn install --frozen-lockfile'}
     " target edits
     Plug 'wellle/targets.vim'
     " better whitespaces
     Plug 'ntpeters/vim-better-whitespace'
+    " Telescope
+    Plug 'nvim-telescope/telescope.nvim'
+    " Plenary
+    Plug 'nvim-lua/plenary.nvim'
+    " Popup
+    Plug 'nvim-lua/popup.nvim'
 call plug#end()
