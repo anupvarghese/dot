@@ -12,4 +12,5 @@ source $HOME/.config/nvim/plug-config/nvim-compe.vim
 source $HOME/.config/nvim/plug-config/bufferline.vim
 source $HOME/.config/nvim/plug-config/gitsigns.vim
 source $HOME/.config/nvim/plug-config/airline.vim
+source $HOME/.config/nvim/plug-config/lspconfig.vim
 source $HOME/.config/nvim/themes/airline.vim

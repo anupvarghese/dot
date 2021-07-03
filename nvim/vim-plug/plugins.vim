@@ -44,9 +44,10 @@ call plug#begin('~/.config/nvim/autoload/plugged')
 
     "LSP
     Plug 'neovim/nvim-lspconfig'
+    Plug 'kabouzeid/nvim-lspinstall'
 
     "Formatter
-    Plug 'sbdchd/neoformat'
+    Plug 'mhartington/formatter.nvim'
 
     "git
     Plug 'lewis6991/gitsigns.nvim'

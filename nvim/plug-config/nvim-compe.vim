@@ -1,3 +1,4 @@
+set completeopt=menuone,noselect
 lua << EOF
 require'compe'.setup {
   enabled = true;
