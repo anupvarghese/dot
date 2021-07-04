@@ -6,7 +6,9 @@ if empty(glob('~/.config/nvim/autoload/plug.vim'))
   "autocmd VimEnter * PlugInstall | source $MYVIMRC
 endif
 
-call plug#begin('~/.config/nvim/autoload/plugged')
+
+
+call plug#begin('~/.config/nvim/autoload/plugged')  
     " comment things
     Plug 'tpope/vim-commentary'
     

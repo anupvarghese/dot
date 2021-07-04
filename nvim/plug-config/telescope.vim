@@ -1,4 +1,5 @@
 " nvim-telescope/telescope.nvim
+
 lua << EOF
 _G.telescope_find_files_in_path = function(path)
  local _path = path or vim.fn.input("Dir: ", "", "dir")
@@ -15,6 +16,17 @@ EOF
 
 lua << EOF
   require('telescope').setup {
+    pickers = {
+      find_files = {
+        theme = "dropdown",
+        mappings = {
+          i = {
+            ["<c-x>"] = require('telescope.actions').select_horizontal,
+            ["<c-v>"] = require('telescope.actions').select_vertical,
+          },
+        }
+      }
+    },
     extensions = {
       fzf = {
         fuzzy = true,                    -- false will only do exact matching
@@ -34,7 +46,6 @@ nnoremap <leader>fd :lua telescope_find_files_in_path()<CR>
 nnoremap <leader>fD :lua telescope_live_grep_in_path()<CR>
 nnoremap <leader>ft :lua telescope_find_files_in_path("./tests")<CR>
 nnoremap <leader>fT :lua telescope_live_grep_in_path("./tests")<CR>
-" nnoremap <leader>ff :Telescope live_grep<CR>
 nnoremap <leader>fo :Telescope file_browser<CR>
 nnoremap <C-f> :Telescope find_files<CR>
 nnoremap <leader>fg :Telescope git_branches<CR>
