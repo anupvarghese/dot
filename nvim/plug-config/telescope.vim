@@ -5,6 +5,7 @@ _G.telescope_find_files_in_path = function(path)
  require("telescope.builtin").find_files({search_dirs = {_path}})
 end
 EOF
+
 lua << EOF
 _G.telescope_live_grep_in_path = function(path)
  local _path = path or vim.fn.input("Dir: ", "", "dir")
@@ -12,7 +13,23 @@ _G.telescope_live_grep_in_path = function(path)
 end
 EOF
 
-nnoremap <leader><space> :Telescope git_files<CR>
+lua << EOF
+  require('telescope').setup {
+    extensions = {
+      fzf = {
+        fuzzy = true,                    -- false will only do exact matching
+        override_generic_sorter = false, -- override the generic sorter
+        override_file_sorter = true,     -- override the file sorter
+        case_mode = "smart_case",        -- or "ignore_case" or "respect_case"
+                                         -- the default case_mode is "smart_case"
+      }
+    }
+  }
+
+  require('telescope').load_extension('fzf')
+EOF
+
+nnoremap <leader><fG :Telescope git_files<CR>
 nnoremap <leader>fd :lua telescope_find_files_in_path()<CR>
 nnoremap <leader>fD :lua telescope_live_grep_in_path()<CR>
 nnoremap <leader>ft :lua telescope_find_files_in_path("./tests")<CR>

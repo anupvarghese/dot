@@ -21,6 +21,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
 
     " Telescope
     Plug 'nvim-telescope/telescope.nvim'
+    Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'make' }
 
     " Plenary
     Plug 'nvim-lua/plenary.nvim'
@@ -55,4 +56,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     "status line
     Plug 'vim-airline/vim-airline'
     Plug 'vim-airline/vim-airline-themes'
+
+    "Autopairs
+    Plug 'jiangmiao/auto-pairs'
 call plug#end()
