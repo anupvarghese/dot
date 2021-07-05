@@ -22,8 +22,10 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'ntpeters/vim-better-whitespace'
 
     " Telescope
+    Plug 'romgrk/fzy-lua-native', { 'do': 'make' }
+    Plug 'nvim-telescope/telescope-fzf-writer.nvim'
     Plug 'nvim-telescope/telescope.nvim'
-    Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'make' }
+    Plug 'nvim-telescope/telescope-fzy-native.nvim'
 
     " Plenary
     Plug 'nvim-lua/plenary.nvim'
