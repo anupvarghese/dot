@@ -14,9 +14,6 @@ let g:airline_right_sep         = '◀'
 let g:airline#extensions#readonly#symbol   = '⊘'
 let g:airline_symbols.branch    = '⎇'
 
-" Switch to your current theme
-let g:airline_theme = 'oceanicnext'
-
 " Always show tabs
 " set showtabline=2
 
