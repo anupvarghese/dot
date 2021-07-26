@@ -13,5 +13,4 @@ source $HOME/.config/nvim/plug-config/gitsigns.vim
 source $HOME/.config/nvim/plug-config/airline.vim
 source $HOME/.config/nvim/plug-config/lspconfig.vim
 source $HOME/.config/nvim/plug-config/lspsaga.vim
-" source $HOME/.config/nvim/plug-config/diagnostics.vim
 source $HOME/.config/nvim/themes/airline.vim
