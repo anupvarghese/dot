@@ -2,6 +2,10 @@
 let g:mapleader = ","
 
 syntax enable                           " Enables syntax highlighting
+set completeopt=menuone,noinsert,noselect
+set ignorecase                          " search case insensitive
+set smartcase                           " search by uppercase if told so
+set incsearch                           " incremental search
 set hidden                              " Required to keep multiple buffers open multiple buffers
 set nowrap                              " Display long lines as just one line
 set encoding=utf-8                      " The encoding displayed
@@ -40,9 +44,6 @@ set foldnestmax=10
 set nofoldenable
 set foldlevel=2
 
-" hi CocCursorRange guibg=#b16286 guifg=#ebdbb2
+let g:netrw_banner=0
 
-" au! BufWritePost $MYVIMRC source %      " auto source when writing to init.vm alternatively you can run :source $MYVIMRC
-
-" You can't stop me
-cmap w!! w !sudo tee % 
+cmap w!! w !sudo tee %

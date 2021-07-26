@@ -47,12 +47,10 @@ nnoremap <leader>g :lua require('telescope').extensions.fzf_writer.staged_grep()
 nnoremap <leader><fG :Telescope git_files<CR>
 nnoremap <leader>fd :lua telescope_find_files_in_path()<CR>
 nnoremap <leader>fD :lua telescope_live_grep_in_path()<CR>
-nnoremap <leader>ft :lua telescope_find_files_in_path("./tests")<CR>
-nnoremap <leader>fT :lua telescope_live_grep_in_path("./tests")<CR>
 nnoremap <leader>fo :Telescope file_browser<CR>
-nnoremap <C-f> :Telescope find_files<CR>
+nnoremap <silent> <C-f> :Telescope find_files<CR>
 nnoremap <leader>fg :Telescope git_branches<CR>
-nnoremap <leader>fb :Telescope buffers<CR>
+nnoremap <silent> <C-p> <cmd>Telescope buffers<cr>
 nnoremap <leader>fs :Telescope lsp_document_symbols<CR>
-" nnoremap <leader>g :Telescope live_grep<CR>
 nnoremap <leader>FF :Telescope grep_string<CR>
+nnoremap <silent> ;; <cmd>map<cr>

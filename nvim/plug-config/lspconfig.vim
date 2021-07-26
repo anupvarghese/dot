@@ -1,10 +1,110 @@
-" LSP config (the mappings used in the default file don't quite work right)
-nnoremap <silent> gd <cmd>lua vim.lsp.buf.definition()<CR>
-nnoremap <silent> gD <cmd>lua vim.lsp.buf.declaration()<CR>
-nnoremap <silent> gr <cmd>lua vim.lsp.buf.references()<CR>
-nnoremap <silent> gi <cmd>lua vim.lsp.buf.implementation()<CR>
-nnoremap <silent> gh <cmd>lua vim.lsp.buf.hover()<CR>
-nnoremap <silent> <C-k> <cmd>lua vim.lsp.buf.signature_help()<CR>
-nnoremap <silent> <C-n> <cmd>lua vim.lsp.diagnostic.goto_prev()<CR>
-nnoremap <silent> <C-p> <cmd>lua vim.lsp.diagnostic.goto_next()<CR>
+lua << EOF
+-- vim.lsp.set_log_level("trace")
+local nvim_lsp = require('lspconfig')
+local protocol = require'vim.lsp.protocol'
 
+local on_attach = function(client, bufnr)
+  local function buf_set_keymap(...) vim.api.nvim_buf_set_keymap(bufnr, ...) end
+  local function buf_set_option(...) vim.api.nvim_buf_set_option(bufnr, ...) end
+
+  local opts = { noremap=true, silent=true }
+
+  buf_set_option('omnifunc', 'v:lua.vim.lsp.omnifunc')
+
+  -- See `:help vim.lsp.*` for documentation
+  buf_set_keymap('n', 'gD', '<Cmd>lua vim.lsp.buf.declaration()<CR>', opts)
+  buf_set_keymap('n', 'gd', '<Cmd>lua vim.lsp.buf.definition()<CR>', opts)
+  buf_set_keymap('n', 'gi', '<Cmd>lua vim.lsp.buf.implementation()<CR>', opts)
+  buf_set_keymap('n', 'gh', '<Cmd>lua vim.lsp.buf.hover()<CR>', opts)
+  buf_set_keymap("n", "<space>f", "<cmd>lua vim.lsp.buf.formatting()<CR>", opts)
+
+
+  -- formatting
+  if client.resolved_capabilities.document_formatting then
+    vim.api.nvim_command [[augroup Format]]
+    vim.api.nvim_command [[autocmd! * <buffer>]]
+    vim.api.nvim_command [[autocmd BufWritePre <buffer> lua vim.lsp.buf.formatting_seq_sync()]]
+    vim.api.nvim_command [[augroup END]]
+  end
+
+  require'completion'.on_attach(client, bufnr)
+
+  protocol.CompletionItemKind = {
+    '', -- Text
+    '', -- Method
+    '', -- Function
+    '', -- Constructor
+    '', -- Field
+    '', -- Variable
+    '', -- Class
+    'ﰮ', -- Interface
+    '', -- Module
+    '', -- Property
+    '', -- Unit
+    '', -- Value
+    '', -- Enum
+    '', -- Keyword
+    '﬌', -- Snippet
+    '', -- Color
+    '', -- File
+    '', -- Reference
+    '', -- Folder
+    '', -- EnumMember
+    '', -- Constant
+    '', -- Struct
+    '', -- Event
+    'ﬦ', -- Operator
+    '', -- TypeParameter
+  }
+end
+
+nvim_lsp.tsserver.setup {
+  on_attach = on_attach,
+  filetypes = { "typescript" }
+}
+
+nvim_lsp.diagnosticls.setup {
+  on_attach = on_attach,
+  filetypes = { 'javascript', 'json', 'typescript', 'markdown'},
+  init_options = {
+    linters = {
+      eslint = {
+        command = 'eslint_d',
+        rootPatterns = { '.git' },
+        debounce = 100,
+        args = { '--stdin', '--stdin-filename', '%filepath', '--format', 'json' },
+        sourceName = 'eslint_d',
+        parseJson = {
+          errorsRoot = '[0].messages',
+          line = 'line',
+          column = 'column',
+          endLine = 'endLine',
+          endColumn = 'endColumn',
+          message = '[eslint] ${message} [${ruleId}]',
+          security = 'severity'
+        },
+        securities = {
+          [2] = 'error',
+          [1] = 'warning'
+        }
+      },
+    },
+    filetypes = {
+      javascript = 'eslint',
+      typescript = 'eslint'
+    },
+  }
+}
+
+vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
+  vim.lsp.diagnostic.on_publish_diagnostics, {
+    underline = true,
+    -- This sets the spacing and the prefix, obviously.
+    virtual_text = {
+      spacing = 4,
+      prefix = ''
+    }
+  }
+)
+
+EOF

@@ -8,10 +8,10 @@ endif
 
 
 
-call plug#begin('~/.config/nvim/autoload/plugged')  
+call plug#begin('~/.config/nvim/autoload/plugged')
     " comment things
     Plug 'tpope/vim-commentary'
-    
+
     " Modify * to also work with visual selections.
     Plug 'nelstrom/vim-visual-star-search'
 
@@ -33,15 +33,12 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     " Popup
     Plug 'nvim-lua/popup.nvim'
 
-    " Tree sitter
-    Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
-
     " NvimTree
     Plug 'kyazdani42/nvim-web-devicons' " for file icons
     Plug 'kyazdani42/nvim-tree.lua'
 
     " Nvim completion
-    Plug 'hrsh7th/nvim-compe'
+    Plug 'nvim-lua/completion-nvim'
 
     "Theme
     Plug 'Mofiqul/vscode.nvim'
@@ -49,7 +46,10 @@ call plug#begin('~/.config/nvim/autoload/plugged')
 
     "LSP
     Plug 'neovim/nvim-lspconfig'
-    Plug 'kabouzeid/nvim-lspinstall'
+    Plug 'glepnir/lspsaga.nvim'
+
+    " Tree sitter
+    Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 
     "Formatter
     Plug 'mhartington/formatter.nvim'
