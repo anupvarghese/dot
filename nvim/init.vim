@@ -8,13 +8,10 @@ source $HOME/.config/nvim/plug-config/indentguides.vim
 source $HOME/.config/nvim/plug-config/telescope.vim
 source $HOME/.config/nvim/plug-config/nvim-tree.vim
 source $HOME/.config/nvim/plug-config/treesitter.vim
-" source $HOME/.config/nvim/plug-config/nvim-compe.vim
 source $HOME/.config/nvim/plug-config/bufferline.vim
 source $HOME/.config/nvim/plug-config/gitsigns.vim
 source $HOME/.config/nvim/plug-config/airline.vim
 source $HOME/.config/nvim/plug-config/lspconfig.vim
 source $HOME/.config/nvim/plug-config/lspsaga.vim
-source $HOME/.config/nvim/plug-config/terraform-lsp.vim
-source $HOME/.config/nvim/plug-config/bash-lsp.vim
-source $HOME/.config/nvim/plug-config/diagnostics.vim
+" source $HOME/.config/nvim/plug-config/diagnostics.vim
 source $HOME/.config/nvim/themes/airline.vim
