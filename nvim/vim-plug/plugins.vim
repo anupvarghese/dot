@@ -36,11 +36,8 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'kyazdani42/nvim-tree.lua'
 
     " Nvim completion
-    Plug 'nvim-lua/completion-nvim'
-
-    "Theme
-    Plug 'Mofiqul/vscode.nvim'
-    Plug 'akinsho/nvim-bufferline.lua'
+    Plug 'hrsh7th/nvim-compe'
+    Plug 'ray-x/lsp_signature.nvim'
 
     "LSP
     Plug 'neovim/nvim-lspconfig'
@@ -60,6 +57,6 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'hoob3rt/lualine.nvim'
 
     "Autopairs
-    Plug 'jiangmiao/auto-pairs'
+    Plug 'windwp/nvim-autopairs'
 
 call plug#end()

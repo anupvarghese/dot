@@ -2,7 +2,6 @@
 let g:mapleader = ","
 
 syntax enable                           " Enables syntax highlighting
-set completeopt=menuone,noinsert,noselect
 set ignorecase                          " search case insensitive
 set smartcase                           " search by uppercase if told so
 set incsearch                           " incremental search

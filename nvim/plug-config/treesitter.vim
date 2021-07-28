@@ -1,5 +1,5 @@
 let g:vscode_style = "dark"
-colorscheme vscode
+colorscheme github
 
 lua <<EOF
 require'nvim-treesitter.configs'.setup {
@@ -15,4 +15,3 @@ EOF
 
 set foldmethod=expr
 setlocal foldlevelstart=99
-set foldexpr=nvim_treesitter#foldexpr()

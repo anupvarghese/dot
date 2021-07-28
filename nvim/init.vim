@@ -8,9 +8,10 @@ source $HOME/.config/nvim/plug-config/indentguides.vim
 source $HOME/.config/nvim/plug-config/telescope.vim
 source $HOME/.config/nvim/plug-config/nvim-tree.vim
 source $HOME/.config/nvim/plug-config/treesitter.vim
-source $HOME/.config/nvim/plug-config/bufferline.vim
 source $HOME/.config/nvim/plug-config/lspconfig.vim
 source $HOME/.config/nvim/plug-config/lspsaga.vim
 source $HOME/.config/nvim/themes/github.vim
 source $HOME/.config/nvim/plug-config/gitsigns.vim
 source $HOME/.config/nvim/plug-config/lualine.vim
+source $HOME/.config/nvim/plug-config/completion.vim
+source $HOME/.config/nvim/plug-config/autopairs.vim
