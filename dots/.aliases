@@ -4,3 +4,4 @@ alias ..='cd ..'
 alias ...='cd ../../'
 alias ....='cd ../../../'
 alias dc='docker-compose'
+alias tmux="env TERM=screen-256color tmux"

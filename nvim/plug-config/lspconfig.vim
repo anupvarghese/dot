@@ -1,5 +1,4 @@
 lua << EOF
--- vim.lsp.set_log_level("trace")
 local nvim_lsp = require('lspconfig')
 local protocol = require'vim.lsp.protocol'
 
@@ -9,26 +8,21 @@ local on_attach = function(client, bufnr)
 
   local opts = { noremap=true, silent=true }
 
-  buf_set_option('omnifunc', 'v:lua.vim.lsp.omnifunc')
-
   -- See `:help vim.lsp.*` for documentation
   buf_set_keymap('n', 'gD', '<Cmd>lua vim.lsp.buf.declaration()<CR>', opts)
   buf_set_keymap('n', 'gd', '<Cmd>lua vim.lsp.buf.definition()<CR>', opts)
   buf_set_keymap('n', 'gi', '<Cmd>lua vim.lsp.buf.implementation()<CR>', opts)
   buf_set_keymap('n', 'gh', '<Cmd>lua vim.lsp.buf.hover()<CR>', opts)
-  buf_set_keymap("n", "<space>f", "<cmd>lua vim.lsp.buf.formatting()<CR>", opts)
 
+  -- Attaches lsp signatures for auto completion
+  require "lsp_signature".on_attach({
+    bind = true, -- This is mandatory, otherwise border config won't get registered.
+    handler_opts = {
+      border = "single"
+    }
+  })
 
-  -- formatting
-  if client.resolved_capabilities.document_formatting then
-    vim.api.nvim_command [[augroup Format]]
-    vim.api.nvim_command [[autocmd! * <buffer>]]
-    vim.api.nvim_command [[autocmd BufWritePre <buffer> lua vim.lsp.buf.formatting_seq_sync()]]
-    vim.api.nvim_command [[augroup END]]
-  end
-
-  require'completion'.on_attach(client, bufnr)
-
+  -- Adds item kind on completion
   protocol.CompletionItemKind = {
     '', -- Text
     '', -- Method
@@ -58,11 +52,13 @@ local on_attach = function(client, bufnr)
   }
 end
 
+-- Language server setup
 nvim_lsp.tsserver.setup {
   on_attach = on_attach,
   filetypes = { "typescript" }
 }
 
+-- Diagnostic setup (formatter is separate)
 nvim_lsp.diagnosticls.setup {
   on_attach = on_attach,
   filetypes = { 'javascript', 'json', 'typescript', 'markdown'},
@@ -96,6 +92,7 @@ nvim_lsp.diagnosticls.setup {
   }
 }
 
+-- This is to show diagnostics messages
 vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
   vim.lsp.diagnostic.on_publish_diagnostics, {
     underline = true,

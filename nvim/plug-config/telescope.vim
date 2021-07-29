@@ -1,5 +1,3 @@
-" nvim-telescope/telescope.nvim
-
 lua << EOF
 _G.telescope_find_files_in_path = function(path)
  local _path = path or vim.fn.input("Dir: ", "", "dir")

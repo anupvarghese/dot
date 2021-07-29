@@ -2,8 +2,6 @@
 if empty(glob('~/.config/nvim/autoload/plug.vim'))
   silent !curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs
     \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-  "autocmd VimEnter * PlugInstall
-  "autocmd VimEnter * PlugInstall | source $MYVIMRC
 endif
 
 
@@ -38,11 +36,8 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'kyazdani42/nvim-tree.lua'
 
     " Nvim completion
-    Plug 'nvim-lua/completion-nvim'
-
-    "Theme
-    Plug 'Mofiqul/vscode.nvim'
-    Plug 'akinsho/nvim-bufferline.lua'
+    Plug 'hrsh7th/nvim-compe'
+    Plug 'ray-x/lsp_signature.nvim'
 
     "LSP
     Plug 'neovim/nvim-lspconfig'
@@ -57,10 +52,11 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     "git
     Plug 'lewis6991/gitsigns.nvim'
 
-    "status line
-    Plug 'vim-airline/vim-airline'
-    Plug 'vim-airline/vim-airline-themes'
+    "themes & status line
+    Plug 'projekt0n/github-nvim-theme'
+    Plug 'hoob3rt/lualine.nvim'
 
     "Autopairs
-    Plug 'jiangmiao/auto-pairs'
+    Plug 'windwp/nvim-autopairs'
+
 call plug#end()
