@@ -1,2 +1,1 @@
-let g:indentguides_spacechar = '┆'
-let g:indentguides_tabchar = '␣'
+let g:indent_blankline_char_list = ['|', '¦', '┆', '┊']

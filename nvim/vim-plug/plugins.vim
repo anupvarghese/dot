@@ -14,7 +14,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'nelstrom/vim-visual-star-search'
 
     " Indentguide
-    Plug 'thaerkh/vim-indentguides'
+    Plug 'lukas-reineke/indent-blankline.nvim'
 
     " better whitespaces
     Plug 'ntpeters/vim-better-whitespace'
@@ -55,6 +55,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     "themes & status line
     Plug 'projekt0n/github-nvim-theme'
     Plug 'hoob3rt/lualine.nvim'
+    Plug 'akinsho/nvim-bufferline.lua'
 
     "Autopairs
     Plug 'windwp/nvim-autopairs'
