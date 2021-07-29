@@ -33,6 +33,8 @@ cd ~/.dotfiles && ./install.sh
 - [gitsigns](https://github.com/lewis6991/gitsigns.nvim)
 - [github-nvim-theme](https://github.com/projekt0n/github-nvim-theme)
 - [nvim-autopairs](https://github.com/windwp/nvim-autopairs)
+- [bufferline](https://github.com/akinsho/nvim-bufferline.lua)
+- [indent-blankline](https://github.com/lukas-reineke/indent-blankline.nvim)
 
 #### How does it look?
 
