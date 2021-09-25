@@ -58,6 +58,8 @@ nvim_lsp.tsserver.setup {
   filetypes = { "typescript" }
 }
 
+nvim_lsp.terraformls.setup{}
+
 -- Diagnostic setup (formatter is separate)
 nvim_lsp.diagnosticls.setup {
   on_attach = on_attach,

@@ -143,4 +143,4 @@ done;
 unset file;
 
 source ~/.aliases
-
+source ~/.secrets

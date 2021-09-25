@@ -45,4 +45,7 @@ set foldlevel=2
 
 :command! -bar -bang Q quit<bang>
 
+" auto reload
+au FocusGained,BufEnter * :checktime
+
 cmap w!! w !sudo tee %
