@@ -53,11 +53,18 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'lewis6991/gitsigns.nvim'
 
     "themes & status line
-    Plug 'projekt0n/github-nvim-theme'
+    " Plug 'projekt0n/github-nvim-theme'
+    Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
     Plug 'hoob3rt/lualine.nvim'
     Plug 'akinsho/nvim-bufferline.lua'
 
     "Autopairs
     Plug 'windwp/nvim-autopairs'
+
+    "Rainbow
+    Plug 'p00f/nvim-ts-rainbow'
+
+    " Gitblame
+    Plug 'ttys3/nvim-blamer.lua'
 
 call plug#end()

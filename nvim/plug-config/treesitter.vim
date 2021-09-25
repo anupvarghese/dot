@@ -1,9 +1,9 @@
 let g:vscode_style = "dark"
-colorscheme github
+colorscheme tokyonight
 
 lua <<EOF
 require'nvim-treesitter.configs'.setup {
-  ensure_installed = { "typescript" },
+  ensure_installed = { "typescript", "hcl" },
   highlight = {
     enable = true,              -- false will disable the whole extension
   },

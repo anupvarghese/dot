@@ -2,7 +2,7 @@ lua << EOF
 require('lualine').setup {
   options = {
     icons_enabled = true,
-    theme = 'github',
+    theme = 'tokyonight',
     component_separators = {'', ''},
     section_separators = {'', ''},
     disabled_filetypes = {}
