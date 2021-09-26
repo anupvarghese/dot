@@ -18,3 +18,4 @@ source $HOME/.config/nvim/plug-config/autopairs.vim
 source $HOME/.config/nvim/plug-config/bufferline.vim
 source $HOME/.config/nvim/plug-config/rainbow.vim
 source $HOME/.config/nvim/plug-config/gitblame.vim
+source $HOME/.config/nvim/plug-config/toggleterm.vim

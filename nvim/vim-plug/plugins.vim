@@ -67,4 +67,6 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     " Gitblame
     Plug 'ttys3/nvim-blamer.lua'
 
+    " Terminal
+    Plug 'akinsho/toggleterm.nvim'
 call plug#end()
