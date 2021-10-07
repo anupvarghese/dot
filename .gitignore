@@ -3,3 +3,4 @@ autoload
 .netrwhist
 .DS_Store
 .secrets
+nvim/nvim
