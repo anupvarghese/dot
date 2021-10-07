@@ -1,6 +1,7 @@
 [user]
 	name = Anoop Varghese
 	email = avarghese@atlassian.com
+	signingkey = 5EE500E17DE91EA1
 
 [github]
   user = anupvarghese
