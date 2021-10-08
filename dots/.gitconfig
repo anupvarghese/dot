@@ -3,8 +3,8 @@
 	email = anupvarghese@gmail.com
 	signingkey = 5EE500E17DE91EA1
 
-[includeIf "gitdir:~/work"]
-  path = ~/dotfiles/.gitconfig_work
+[includeIf "gitdir:~/.work"]
+  path = ~/.work/.gitconfig
 
 [github]
   user = anupvarghese
