@@ -4,3 +4,4 @@ autoload
 .DS_Store
 .secrets
 nvim/nvim
+.work
