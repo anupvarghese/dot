@@ -1,6 +1,10 @@
 [user]
 	name = Anoop Varghese
-	email = avarghese@atlassian.com
+	email = anupvarghese@gmail.com
+	signingkey = 5EE500E17DE91EA1
+
+[includeIf "gitdir:~/Documents/work/"]
+  path = ~/.work/.gitconfig
 
 [github]
   user = anupvarghese
@@ -13,3 +17,6 @@
 
 [credential]
 	helper = osxkeychain
+
+[commit]
+	gpgsign = true
