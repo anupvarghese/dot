@@ -43,6 +43,14 @@ local stylua = function()
 	}
 end
 
+local gofmt = function()
+	return {
+		exe = "gofmt",
+		args = { vim.api.nvim_buf_get_name(0) },
+		stdin = true,
+	}
+end
+
 require("formatter").setup({
 	logging = false,
 	filetype = {
@@ -81,6 +89,9 @@ require("formatter").setup({
 		},
 		lua = {
 			stylua,
+		},
+		go = {
+			gofmt,
 		},
 	},
 })
