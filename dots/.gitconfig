@@ -3,14 +3,11 @@
 	email = anupvarghese@gmail.com
 	signingkey = 5EE500E17DE91EA1
 
-[includeIf "gitdir:~/Documents/work/"]
-  path = ~/.work/.gitconfig
-
 [github]
   user = anupvarghese
 
 [core]
-	excludesfile = /Users/anupvarghese/.gitignore_global
+	excludesfile = ~/.gitignore_global
 
 [mergetool]
 	keepBackup = false
@@ -20,3 +17,6 @@
 
 [commit]
 	gpgsign = true
+
+[includeIf "gitdir:~/Documents/work/"]
+  path = ~/.work/.gitconfig

@@ -1,5 +1,4 @@
-ZSH="$DOTFILES_DIR/.oh-my-zsh"
-ZSH_CUSTOM="$DOTFILES_DIR/.oh-my-zsh/custom"
+ZSH_CUSTOM="${HOME}/.dotfiles/oh-my-zsh/custom"
 
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
 

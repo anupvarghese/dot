@@ -10,9 +10,9 @@ VP Y8888D'  `Y88P'     YP    YP      Y888888P Y88888P Y88888P `8888Y'
 ### How to install?
 
 ```shell
-git clone https://github.com/anupvarghese/dotfiles ~/.dotfiles
+git clone https://github.com/anupvarghese/dot ~/.dotfiles
 
-cd ~/.dotfiles && ./install.sh
+cd ~/.dotfiles/install && ./install.sh
 ```
 
 ### What is in?
