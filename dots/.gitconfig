@@ -1,16 +1,13 @@
 [user]
 	name = Anoop Varghese
 	email = anupvarghese@gmail.com
-	signingkey = 5EE500E17DE91EA1
-
-[includeIf "gitdir:~/Documents/work/"]
-  path = ~/.work/.gitconfig
+	signingkey = 722EAC430390604B
 
 [github]
   user = anupvarghese
 
 [core]
-	excludesfile = /Users/anupvarghese/.gitignore_global
+	excludesfile = ~/.gitignore_global
 
 [mergetool]
 	keepBackup = false
@@ -18,5 +15,12 @@
 [credential]
 	helper = osxkeychain
 
+[gpg]
+	program = gpg
+
 [commit]
+	gpsign = true
 	gpgsign = true
+
+[includeIf "gitdir:~/Documents/work/"]
+  path = ~/.work/.gitconfig

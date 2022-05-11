@@ -1,11 +1,10 @@
 local null = require("null-ls")
 local builtins = null.builtins
 
-null.config({
+null.setup({
 	sources = {
 		builtins.diagnostics.eslint_d,
 		builtins.formatting.prettier,
 	},
 })
 
-require("lspconfig")["null-ls"].setup({})
