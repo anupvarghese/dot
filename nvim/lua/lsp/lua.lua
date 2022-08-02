@@ -1,8 +1,11 @@
 local lsp_config = require("lspconfig")
-local on_attach = require("lsp/on_attach")
+local on_attach, lsp_flags, capabilities = require("lsp/on_attach")()
 
 lsp_config.sumneko_lua.setup({
+	single_file_support = true,
 	on_attach = on_attach,
+	flags = lsp_flags,
+	capabilities = capabilities,
 	settings = {
 		Lua = {
 			runtime = {

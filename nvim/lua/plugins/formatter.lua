@@ -78,9 +78,6 @@ require("formatter").setup({
 		scss = {
 			prettier,
 		},
-		yaml = {
-			prettier,
-		},
 		html = {
 			prettier,
 		},

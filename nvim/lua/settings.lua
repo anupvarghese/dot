@@ -35,6 +35,7 @@ vim.opt.foldnestmax = 10
 vim.opt.foldlevel = 2
 
 vim.opt.completeopt = {
+	"menu",
 	"menuone",
 	"noinsert",
 	"noselect",
