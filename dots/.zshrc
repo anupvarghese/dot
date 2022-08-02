@@ -143,3 +143,4 @@ done;
 unset file;
 
 source ~/.aliases
+source ~/.bash_profile

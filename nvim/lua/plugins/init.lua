@@ -78,12 +78,48 @@ require("packer").startup(function()
 		end,
 	})
 
+	-- autopairs
+	use({
+		"windwp/nvim-autopairs",
+		config = function()
+			require("plugins/autopairs")
+		end,
+	})
+
 	-- completion engine for LSP
 	use({
-		"hrsh7th/nvim-compe",
+		"hrsh7th/nvim-cmp",
 		config = function()
-			require("plugins/completion")
+			require("plugins/nvim-cmp")
 		end,
+	})
+
+	use({
+		"hrsh7th/cmp-buffer",
+	})
+
+	use({
+		"hrsh7th/cmp-path",
+	})
+
+	use({
+		"hrsh7th/cmp-cmdline",
+	})
+
+	use({ 
+		'saadparwaiz1/cmp_luasnip',
+	})
+
+	use({
+		'rafamadriz/friendly-snippets',
+	})
+
+	use({
+		"L3MON4D3/LuaSnip",
+	})
+
+	use({
+		"hrsh7th/cmp-nvim-lsp",
 	})
 
 	-- run formatters
@@ -103,14 +139,6 @@ require("packer").startup(function()
 		},
 		config = function()
 			require("plugins/telescope")
-		end,
-	})
-
-	-- autopairs
-	use({
-		"windwp/nvim-autopairs",
-		config = function()
-			require("plugins/autopairs")
 		end,
 	})
 

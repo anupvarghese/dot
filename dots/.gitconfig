@@ -19,7 +19,6 @@
 	program = gpg
 
 [commit]
-	gpsign = true
 	gpgsign = true
 
 [includeIf "gitdir:~/Documents/work/"]
