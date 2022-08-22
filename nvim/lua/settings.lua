@@ -3,7 +3,7 @@ vim.g.mapleader = ","
 
 vim.opt.syntax = "enable" -- Enables syntax highlighting
 vim.opt.ignorecase = true -- search case insensitive
-vim.opt.mouse = "a"
+-- vim.opt.mouse = "a"
 vim.opt.smartcase = true -- search by uppercase if told so
 vim.opt.incsearch = true -- incremental search
 vim.opt.hidden = true -- Required to keep multiple buffers open multiple buffers
@@ -23,7 +23,7 @@ vim.opt.smartindent = true -- Makes indenting smart
 vim.opt.autoindent = true -- Good auto indent
 vim.opt.laststatus = 2 -- Always display the status line
 vim.opt.number = true -- Line numbers
-vim.opt.relativenumber = true -- Add relative number
+vim.opt.relativenumber = true-- Add relative number
 vim.opt.cursorline = true -- Enable highlighting of the current line
 vim.opt.background = "dark" -- tell vim what the background color looks like
 vim.opt.showtabline = 2 -- Always show tabs
