@@ -1,15 +1,5 @@
 local actions = require("telescope.actions")
 
-local M = {}
-
-M.project_files = function()
-	local opts = {} -- define here if you want to define something
-	local ok = pcall(require("telescope.builtin").git_files, opts)
-	if not ok then
-		require("telescope.builtin").find_files(opts)
-	end
-end
-
 require("telescope").setup({
 	defaults = {
 		prompt_prefix = "🔭 ",
@@ -73,7 +63,7 @@ require("telescope").setup({
 vim.api.nvim_set_keymap(
 	"n",
 	"<C-f>",
-	'<cmd>lua require("plugins/telescope").project_files()<CR>',
+	'<cmd>lua require("telescope.builtin").find_files()<CR>',
 	{ noremap = true, silent = true }
 )
 vim.api.nvim_set_keymap(
@@ -84,15 +74,14 @@ vim.api.nvim_set_keymap(
 )
 vim.api.nvim_set_keymap(
 	"n",
-	"<Leader>f",
-	'<cmd>lua require("telescope.builtin").file_browser()<CR>',
-	{ noremap = true, silent = true }
-)
-vim.api.nvim_set_keymap(
-	"n",
 	"<Leader>b",
 	'<cmd>lua require("telescope.builtin").buffers()<CR>',
 	{ noremap = true, silent = true }
 )
 
-return M
+vim.api.nvim_set_keymap(
+	"n",
+	"<Leader>m",
+	'<cmd>lua require("telescope.builtin").marks()<CR>',
+	{ noremap = true, silent = true }
+)
