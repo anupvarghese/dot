@@ -1,8 +1,10 @@
+local mocha = require("catppuccin.palettes").get_palette "latte"
+
 require("bufferline").setup({
 	options = {
 		numbers = "buffer_id",
 		close_command = "bdelete! %d", -- can be a string | function, see "Mouse actions"
-		indicator_icon = "▎",
+		-- indicator_icon = "▎",
 		buffer_close_icon = "",
 		modified_icon = "●",
 		close_icon = "",
@@ -24,5 +26,19 @@ require("bufferline").setup({
 		separator_style = "thin",
 		enforce_regular_tabs = false,
 		always_show_bufferline = true,
+	},
+	highlights = require("catppuccin.groups.integrations.bufferline").get {
+		styles = { "italic", "bold" },
+		custom = {
+			all = {
+				fill = { bg = "#000000" },
+			},
+			mocha = {
+				background = { fg = mocha.text },
+			},
+			latte = {
+				background = { fg = "#000000" },
+			},
+		},
 	},
 })

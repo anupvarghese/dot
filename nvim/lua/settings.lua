@@ -3,7 +3,7 @@ vim.g.mapleader = ","
 
 vim.opt.syntax = "enable" -- Enables syntax highlighting
 vim.opt.ignorecase = true -- search case insensitive
-vim.opt.mouse = "a"
+-- vim.opt.mouse = "a"
 vim.opt.smartcase = true -- search by uppercase if told so
 vim.opt.incsearch = true -- incremental search
 vim.opt.hidden = true -- Required to keep multiple buffers open multiple buffers
@@ -23,16 +23,16 @@ vim.opt.smartindent = true -- Makes indenting smart
 vim.opt.autoindent = true -- Good auto indent
 vim.opt.laststatus = 2 -- Always display the status line
 vim.opt.number = true -- Line numbers
-vim.opt.relativenumber = true -- Add relative number
+vim.opt.relativenumber = true-- Add relative number
 vim.opt.cursorline = true -- Enable highlighting of the current line
 vim.opt.background = "dark" -- tell vim what the background color looks like
 vim.opt.showtabline = 2 -- Always show tabs
 vim.opt.updatetime = 300 -- Faster completion
 vim.opt.timeoutlen = 500 -- By default timeoutlen is 1000 ms
 vim.opt.clipboard = "unnamedplus" -- Copy paste between vim and everything else
-vim.opt.foldmethod = "syntax" -- Set code folding by language"
-vim.opt.foldnestmax = 10
-vim.opt.foldlevel = 2
+-- vim.opt.foldmethod = "syntax" -- Set code folding by language"
+-- vim.opt.foldnestmax = 10
+-- vim.opt.foldlevel = 2
 
 vim.opt.completeopt = {
 	"menu",

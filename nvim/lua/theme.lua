@@ -8,4 +8,4 @@ vim.opt.guicursor = {
 	"a:blinkwait700-blinkoff400-blinkon250-Cursor/lCursor",
 	"sm:block-blinkwait175-blinkoff150-blinkon175",
 }
-vim.cmd("colorscheme tokyonight")
+
