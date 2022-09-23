@@ -1,3 +1,5 @@
+local mocha = require("catppuccin.palettes").get_palette "latte"
+
 require("bufferline").setup({
 	options = {
 		numbers = "buffer_id",
@@ -24,5 +26,19 @@ require("bufferline").setup({
 		separator_style = "thin",
 		enforce_regular_tabs = false,
 		always_show_bufferline = true,
+	},
+	highlights = require("catppuccin.groups.integrations.bufferline").get {
+		styles = { "italic", "bold" },
+		custom = {
+			all = {
+				fill = { bg = "#000000" },
+			},
+			mocha = {
+				background = { fg = mocha.text },
+			},
+			latte = {
+				background = { fg = "#000000" },
+			},
+		},
 	},
 })

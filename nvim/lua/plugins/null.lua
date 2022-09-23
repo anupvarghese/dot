@@ -1,10 +1,24 @@
 local null = require("null-ls")
 local builtins = null.builtins
+local formatting = null.builtins.formatting
 
 null.setup({
+	debug = false,
 	sources = {
-		builtins.diagnostics.eslint_d,
-		builtins.formatting.prettier,
+		formatting.eslint_d,
+		formatting.prettierd.with({
+			filetypes = {
+				"css",
+				"scss",
+				"less",
+				"html",
+				"json",
+				"yaml",
+				"markdown",
+				"graphql",
+			},
+		}),
+		formatting.stylua,
 	},
 })
 

@@ -18,8 +18,12 @@ require("packer").startup(function()
 
 	-- themes
 	use({
-		"folke/tokyonight.nvim",
-	})
+		 "catppuccin/nvim",
+			as = "catppuccin",
+			config = function()
+				require("plugins/catppuccin")
+			end,
+	 })
 
 	use({
 		"hoob3rt/lualine.nvim",
@@ -70,6 +74,12 @@ require("packer").startup(function()
 		end,
 	})
 
+  use({
+    "simrat39/rust-tools.nvim",
+    config = function()
+      require("plugins/rust")
+    end,
+  })
 	-- configuration for language servers
 	use({
 		"neovim/nvim-lspconfig",

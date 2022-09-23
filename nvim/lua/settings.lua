@@ -30,9 +30,9 @@ vim.opt.showtabline = 2 -- Always show tabs
 vim.opt.updatetime = 300 -- Faster completion
 vim.opt.timeoutlen = 500 -- By default timeoutlen is 1000 ms
 vim.opt.clipboard = "unnamedplus" -- Copy paste between vim and everything else
-vim.opt.foldmethod = "syntax" -- Set code folding by language"
-vim.opt.foldnestmax = 10
-vim.opt.foldlevel = 2
+-- vim.opt.foldmethod = "syntax" -- Set code folding by language"
+-- vim.opt.foldnestmax = 10
+-- vim.opt.foldlevel = 2
 
 vim.opt.completeopt = {
 	"menu",
