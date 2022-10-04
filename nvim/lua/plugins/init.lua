@@ -74,12 +74,17 @@ require("packer").startup(function()
 		end,
 	})
 
-  use({
-    "simrat39/rust-tools.nvim",
-    config = function()
-      require("plugins/rust")
-    end,
+	use({
+		"nvim-treesitter/nvim-treesitter-context",
+		config = function()
+			require("plugins/treesitter-context")
+		end,
+	})
+
+	use({
+    "simrat39/rust-tools.nvim"
   })
+
 	-- configuration for language servers
 	use({
 		"neovim/nvim-lspconfig",
