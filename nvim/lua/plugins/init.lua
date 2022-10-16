@@ -85,14 +85,6 @@ require("packer").startup(function()
     "simrat39/rust-tools.nvim"
   })
 
-	-- configuration for language servers
-	use({
-		"neovim/nvim-lspconfig",
-		config = function()
-			require("lsp")
-		end,
-	})
-
 	-- autopairs
 	use({
 		"windwp/nvim-autopairs",
@@ -101,42 +93,30 @@ require("packer").startup(function()
 		end,
 	})
 
-	-- completion engine for LSP
-	use({
-		"hrsh7th/nvim-cmp",
-		config = function()
-			require("plugins/nvim-cmp")
-		end,
-	})
+  use {
+    'VonHeikemen/lsp-zero.nvim',
+    config = function()
+      require("lsp")
+    end,
+    requires = {
+      -- LSP Support
+      {'neovim/nvim-lspconfig'},
+      {'williamboman/mason.nvim'},
+      {'williamboman/mason-lspconfig.nvim'},
 
-	use({
-		"hrsh7th/cmp-buffer",
-	})
+      -- Autocompletion
+      {'hrsh7th/nvim-cmp'},
+      {'hrsh7th/cmp-buffer'},
+      {'hrsh7th/cmp-path'},
+      {'saadparwaiz1/cmp_luasnip'},
+      {'hrsh7th/cmp-nvim-lsp'},
+      {'hrsh7th/cmp-nvim-lua'},
 
-	use({
-		"hrsh7th/cmp-path",
-	})
-
-	use({
-		"hrsh7th/cmp-cmdline",
-	})
-
-	use({ 
-		'saadparwaiz1/cmp_luasnip',
-	})
-
-	use({
-		'rafamadriz/friendly-snippets',
-	})
-
-	use({
-		"L3MON4D3/LuaSnip",
-	})
-
-	use({
-		"hrsh7th/cmp-nvim-lsp",
-	})
-
+      -- Snippets
+      {'L3MON4D3/LuaSnip'},
+      {'rafamadriz/friendly-snippets'},
+    }
+  }
 	-- run formatters
 	use({
 		"mhartington/formatter.nvim",
