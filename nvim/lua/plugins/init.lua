@@ -18,12 +18,12 @@ require("packer").startup(function()
 
 	-- themes
 	use({
-		 "catppuccin/nvim",
-			as = "catppuccin",
-			config = function()
-				require("plugins/catppuccin")
-			end,
-	 })
+		"catppuccin/nvim",
+		as = "catppuccin",
+		config = function()
+			require("plugins/catppuccin")
+		end,
+	})
 
 	use({
 		"hoob3rt/lualine.nvim",
@@ -82,8 +82,8 @@ require("packer").startup(function()
 	})
 
 	use({
-    "simrat39/rust-tools.nvim"
-  })
+		"simrat39/rust-tools.nvim",
+	})
 
 	-- autopairs
 	use({
@@ -93,30 +93,36 @@ require("packer").startup(function()
 		end,
 	})
 
-  use {
-    'VonHeikemen/lsp-zero.nvim',
-    config = function()
-      require("lsp")
-    end,
-    requires = {
-      -- LSP Support
-      {'neovim/nvim-lspconfig'},
-      {'williamboman/mason.nvim'},
-      {'williamboman/mason-lspconfig.nvim'},
+	use({
+		"VonHeikemen/lsp-zero.nvim",
+		config = function()
+			require("lsp")
+		end,
+		requires = {
+			-- LSP Support
+			{ "neovim/nvim-lspconfig" },
+			{ "williamboman/mason.nvim" },
+			{ "williamboman/mason-lspconfig.nvim" },
+			-- Formatters
+			{ "WhoIsSethDaniel/mason-tool-installer.nvim" },
+			-- DAP
+			-- dap
+			{ "mfussenegger/nvim-dap" },
+			{ "jayp0521/mason-nvim-dap.nvim" },
 
-      -- Autocompletion
-      {'hrsh7th/nvim-cmp'},
-      {'hrsh7th/cmp-buffer'},
-      {'hrsh7th/cmp-path'},
-      {'saadparwaiz1/cmp_luasnip'},
-      {'hrsh7th/cmp-nvim-lsp'},
-      {'hrsh7th/cmp-nvim-lua'},
+			-- Autocompletion
+			{ "hrsh7th/nvim-cmp" },
+			{ "hrsh7th/cmp-buffer" },
+			{ "hrsh7th/cmp-path" },
+			{ "saadparwaiz1/cmp_luasnip" },
+			{ "hrsh7th/cmp-nvim-lsp" },
+			{ "hrsh7th/cmp-nvim-lua" },
 
-      -- Snippets
-      {'L3MON4D3/LuaSnip'},
-      {'rafamadriz/friendly-snippets'},
-    }
-  }
+			-- Snippets
+			{ "L3MON4D3/LuaSnip" },
+			{ "rafamadriz/friendly-snippets" },
+		},
+	})
 	-- run formatters
 	use({
 		"mhartington/formatter.nvim",
