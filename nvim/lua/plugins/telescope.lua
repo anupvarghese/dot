@@ -85,3 +85,18 @@ vim.api.nvim_set_keymap(
 	'<cmd>lua require("telescope.builtin").marks()<CR>',
 	{ noremap = true, silent = true }
 )
+
+vim.api.nvim_set_keymap(
+	"n",
+	"<Leader>r",
+	'<cmd>lua require("telescope.builtin").resume()<CR>',
+	{ noremap = true, silent = true }
+)
+
+vim.api.nvim_set_keymap(
+	"n",
+	"<Leader>gd",
+	'<cmd>lua require("telescope.builtin").git_bcommits()<CR>',
+	{ noremap = true, silent = true }
+)
+
