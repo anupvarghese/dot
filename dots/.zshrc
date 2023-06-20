@@ -144,3 +144,4 @@ unset file;
 
 source ~/.aliases
 source ~/.bash_profile
+source ~/.work
