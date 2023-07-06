@@ -34,9 +34,9 @@ map("n", "<Right>", "<Nop>", { noremap = true, silent = true })
 map("n", "Q", "<Nop>", { noremap = true, silent = true })
 map("n", "<C-z>", "<Nop>", { noremap = true, silent = true })
 
--- TAB in general mode will move to text buffer
-map("n", "<TAB>", ":bnext<CR>", { noremap = true, silent = true })
-map("n", "<S-TAB>", ":bprevious<CR>", { noremap = true, silent = true })
+-- -- TAB in general mode will move to text buffer
+-- map("n", "<C-TAB>", ":bnext<CR>", { noremap = true, silent = true })
+-- map("n", "<S-TAB>", ":bprevious<CR>", { noremap = true, silent = true })
 
 -- close an opened buffer
 map("n", "<Leader>q", ":bw<CR>", { noremap = true, silent = true })
